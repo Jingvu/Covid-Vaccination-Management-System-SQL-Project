@@ -6,7 +6,6 @@ It includes designing a conceptual model for storing the dataset in a relational
 ## Designing the database
 ![Blank diagram (1)](https://github.com/user-attachments/assets/d13aa01a-c74a-41bb-b25f-ea23156f9f04)
 
-
 ### Relationship Explanation
 - Location - Source_name: each location can originate from multiple sources, with each source potentially having several locations.
 - Location – States: each location can have 0 to n states and each state is linked to a single location.
@@ -40,3 +39,7 @@ VaccinationRecordByLocation (date, iso_code*, total_vaccinations, people_vaccina
 - The same method applied to vaccines is used for age groups, resulting in two separate tables Age_group and VaccinationRecordByAge.
 - Although there are some numeric variables in VaccinationRecordByVaccine, US_State, and VaccinationRecordByAge that share names with those in the VaccinationRecordByLocation (ex: total_vaccinations,…) table, they differ in their levels and are therefore stored in different tables.
 - Many countries, such as Australia, Mexico, and Nigeria, also have states. The ER diagram in this study is designed to accommodate this scenario by using two separate tables States and US_State.
+
+## References
+Ritchie, H., Mathieu, E., Rodés-Guirao, L., Appel, C., Giattino, C., Ortiz-Ospina, E., Hasell, J., Macdonald, B., Beltekian, D., & Roser, M. (2024). COVID-19: Vaccinations. Our World in Data. GitHub. https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations.\
+Mathieu, E., Ritchie, H., Ortiz-Ospina, E. et al. A global database of COVID-19 vaccinations. Nat Hum Behav (2021). https://doi.org/10.1038/s41562-021-01122-8.
