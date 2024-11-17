@@ -1,5 +1,5 @@
--- PART D
--- Task D.1
+-- For any two given months, list the months, the total number of vaccines administered in each observation months 
+-- in each of all countries, and the difference between the administered vaccines.
 SELECT 
     l.location AS Country_Name,
     'April 2022' AS Observation_Months_1,
@@ -14,7 +14,8 @@ WHERE v.iso_code IN ('OWID_WLS', 'CAN', 'USA', 'DNK')
 GROUP BY v.iso_code, l.location
 ORDER BY l.location;
 
---Task D2
+-- Find the countries with more than the average cumulative numbers of COVID-19 doses administered by each country 
+-- in each month 
 WITH MonthlyAverages AS (
     SELECT 
         strftime('%Y-%m', date) AS Month,
@@ -41,7 +42,7 @@ JOIN MonthlyAverages m ON c.Month = m.Month
 WHERE c.CumulativeDoses > m.AvgCumulativeDoses
 ORDER BY c.Month, c.Country_Name;
 
--- Task D.3
+-- Produce a list of vaccine types with the countries taking each vaccine type
 SELECT 
     v.vaccine_name AS Vaccine_Type,
     l.location AS Country
@@ -50,7 +51,8 @@ JOIN Location l ON v.iso_code = l.iso_code
 WHERE l.iso_code IN ('OWID_WLS', 'CAN', 'USA', 'DNK')
 ORDER BY Vaccine_Type, Country;
 
--- Task D.4
+-- A report showing the total number of vaccines administered in each country according to each data source. 
+-- Order the result set by the total number of administered vaccines.
 SELECT 
     l.location AS Country_Name,
     s.source_website AS Source_URL,
@@ -62,7 +64,8 @@ WHERE l.iso_code IN ('OWID_WLS', 'CAN', 'USA', 'DNK')
 GROUP BY Country_Name, Source_URL
 ORDER BY Total_Administered_Vaccines DESC;
 
--- Task D.5
+-- A report that lists all the observation months in 2022 and 2023, and then for each months, list the total number 
+-- of people fully vaccinated in each one of the 4 countries US, Wales, Canada and Denmark
 SELECT 
     strftime('%Y-%m', date) AS Month,
     SUM(CASE WHEN l.location = 'United States' THEN v.people_fully_vaccinated ELSE 0 END) AS United_States,
