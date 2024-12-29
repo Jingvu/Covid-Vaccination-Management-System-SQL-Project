@@ -28,7 +28,7 @@ VaccinationRecordByAge (date, iso_code*, age_group*, people_vaccinated_per_hundr
 VaccinationRecordByLocation (date, iso_code*, total_vaccinations, people_vaccinated, people_fully_vaccinated, total_boosters, daily_vaccinations_raw, daily_vaccinations, total_vaccinations_per_hundred, people_vaccinated_per_hundred, people_fully_vaccinated_per_hundred, total_boosters_per_hundred, daily_vaccinations_per_million, daily_people_vaccinated, daily_people_vaccinated_per_hundred)
 
 ### Assumptions, Adjustments and Constraints
-- Despite not being applicable to this dataset, in real-world scenarios, data for each location can originate from multiple sources, with each source potentially having several URLs. The ER diagram in this study is designed to be suitable for dealing with this scenario.
+- Data for each location can originate from multiple sources, with each source potentially having several URLs. The ER diagram in this study is designed to be suitable for dealing with this scenario.
 - Vaccines are a multivalued attribute and must be separated and normalized, so the vaccine data need to be tidied to eliminate any comma-separated values.
 - The Location entity is central and based on the “Locations.csv” file. Any additional location data recorded in other tables will be updated in this table. This includes some subnational locations (such as England, Northern Ireland, Scotland, Wales, Northern Cyprus) and international aggregates (such as World, continents, European Union). However, due to the limitations of the nine CSV files used, some records may lack source names and source websites.
 - All date values in this dataset are in YYYY-MM-DD format.
