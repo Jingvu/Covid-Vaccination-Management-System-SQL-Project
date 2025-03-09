@@ -1,7 +1,15 @@
-# covid-vaccination-dataset-sql-project
+# COVID-19 Vaccination SQL Project
+*Building a Relational Database for Global Vaccination Data*
+
 This project involves analyzing and understanding a publicly available dataset, ["A Global Database of COVID-19 Vaccinations"](https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations).
 
-It includes designing a conceptual model for storing the dataset in a relational database, implementing and hosting the database, and developing SQL queries to meet specific data analysis requirements.
+COVID-19 vaccination data is complex and constantly changing, making it difficult to analyze. This project designs and implements a structured SQL database to efficiently store, manage, and query vaccination records.
+
+## Challenges Solved
+- Designed a relational database schema for structured storage of vaccination records
+- Normalized data to handle multiple vaccines, locations, and age groups
+- Handled missing & inconsistent data across different sources
+- Enabled efficient querying of daily vaccination trends per country, age group, and vaccine type
 
 ## Designing the database
 ![Blank diagram (1)](https://github.com/user-attachments/assets/d13aa01a-c74a-41bb-b25f-ea23156f9f04)
