@@ -41,5 +41,6 @@ VaccinationRecordByLocation (date, iso_code*, total_vaccinations, people_vaccina
 - Many countries, such as Australia, Mexico, and Nigeria, also have states. The ER diagram in this study is designed to accommodate this scenario by using two separate tables States and US_State.
 
 ## References
-Ritchie, H., Mathieu, E., Rodés-Guirao, L., Appel, C., Giattino, C., Ortiz-Ospina, E., Hasell, J., Macdonald, B., Beltekian, D., & Roser, M. (2024). COVID-19: Vaccinations. Our World in Data. GitHub. https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations.\
+Ritchie, H., Mathieu, E., Rodés-Guirao, L., Appel, C., Giattino, C., Ortiz-Ospina, E., Hasell, J., Macdonald, B., Beltekian, D., & Roser, M. (2024). COVID-19: Vaccinations. Our World in Data. GitHub. https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations.
+
 Mathieu, E., Ritchie, H., Ortiz-Ospina, E. et al. A global database of COVID-19 vaccinations. Nat Hum Behav (2021). https://doi.org/10.1038/s41562-021-01122-8.
