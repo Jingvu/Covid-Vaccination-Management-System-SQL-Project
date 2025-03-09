@@ -3,13 +3,16 @@
 
 This project involves analyzing and understanding a publicly available dataset, ["A Global Database of COVID-19 Vaccinations"](https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations).
 
-COVID-19 vaccination data is complex and constantly changing, making it difficult to analyze. This project designs and implements a structured SQL database to efficiently store, manage, and query vaccination records.
+COVID-19 vaccination data is complex and constantly changing, making it difficult to analyze. This project designed a structured SQL database to store vaccination records, locations and doses administered. The system enables policy makers & health organizations to track vaccine distribution efficiently.
 
 ## Objective
 - Designed a relational database schema for structured storage of vaccination records
+- Optimized database normalization to improve query speed and storage
 - Normalized data to handle multiple vaccines, locations, and age groups
 - Handled missing & inconsistent data across different sources
 - Enabled efficient querying of daily vaccination trends per country, age group, and vaccine type
+- Identified vaccination trends across countries for resource allocation
+- Designed SQL queries to track vaccine types, locations, and distribution efficiency
 
 ## Designing the database
 ![Blank diagram (1)](https://github.com/user-attachments/assets/d13aa01a-c74a-41bb-b25f-ea23156f9f04)
