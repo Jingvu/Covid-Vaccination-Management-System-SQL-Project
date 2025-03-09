@@ -5,7 +5,7 @@ This project involves analyzing and understanding a publicly available dataset, 
 
 COVID-19 vaccination data is complex and constantly changing, making it difficult to analyze. This project designs and implements a structured SQL database to efficiently store, manage, and query vaccination records.
 
-## Challenges Solved
+## Objective
 - Designed a relational database schema for structured storage of vaccination records
 - Normalized data to handle multiple vaccines, locations, and age groups
 - Handled missing & inconsistent data across different sources
